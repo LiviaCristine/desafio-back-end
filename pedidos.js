@@ -2,10 +2,7 @@ const express = require("express");
 const app = express();
 const pedidoRoutes = require('./routes/pedidoRoutes'); // Importa o roteador de pedidos
 const userRoutes = require('./routes/userRoutes'); // Importa o roteador de usuários
-const ConectaBancoDeDados = require('./bancodeDados');
-const Pedido = require('./models/pedidosModel');
-const { User } = require('./models/pedidosModel');
-
+const ConectaBancoDeDados = require('./config/database/bancodeDados');
 
 // Configuração do servidor para interpretar requisições no formato JSON
 app.use(express.json());

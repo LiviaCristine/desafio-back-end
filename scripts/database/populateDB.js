@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const ConectaBancoDeDados = require('./bancodeDados');
-const { Pedidos } = require('./models/pedidosModel');
+const ConectaBancoDeDados = require('../../config/database/bancodeDados');
+const { Pedidos } = require('../../models/pedidosModel');
 
 // Função para conectar ao banco de dados
 ConectaBancoDeDados();

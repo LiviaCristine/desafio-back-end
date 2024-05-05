@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-require('dotenv').config()
+require('dotenv').config({ path: './config/.env' });
 async function ConectaBancoDeDados() {
     try {
         await mongoose.connect(process.env.MONGO_URL)

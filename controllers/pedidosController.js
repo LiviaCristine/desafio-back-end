@@ -1,4 +1,4 @@
-const { Pedido } = require('../models/pedidoModel');
+const { Pedido } = require('../models/pedidosModel');
 
 async function criarPedidos(request, response) {
     try {
@@ -39,10 +39,6 @@ async function criarPedidos(request, response) {
         response.status(500).json({ error: 'Erro ao criar o pedido' });
     }
 }
-
-module.exports = { criarPedido };
-
-
 
 // Função assíncrona para listar todos os pedidos inativos
 async function listarPedidosInativos(request, response) {
