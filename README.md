@@ -86,5 +86,27 @@ GET http://localhost:3333/pedidos: Esta requisição lista todos os pedidos exis
 GET http://localhost:3333/pedidos/inativos): Esta requisição lista todos os pedidos inativos(exlusão lógica).
 
 PUT http://localhost:3333/pedidos/:id: Esta requisição atualiza um pedido existente com o ID fornecido no parâmetro de rota.
+{
+    "numeroDoPedido": "345342",
+    "previsaoEntrega": "2023-01-01",
+    "cliente": {
+        "nome": "Gisele",
+        "documento": "12345678977"
+    },
+    "enderecoEntrega": {
+        "rua": "Rua do Monte",
+        "numero": "450",
+        "bairro": "Lagoinha",
+        "cidade": "Lago Azul",
+        "estado": "MG",
+        "cep": "08760-020"
+    },
+    "itensPedido": [
+        {
+            "descricao": "Um produto bom de se usar",
+            "preco": 60.00
+        }
+    ]
+}
 
 DELETE http://localhost:3333/pedidos/:id: Esta requisição exclui um pedido existente com o ID fornecido no parâmetro de rota(exclusão lógica).
