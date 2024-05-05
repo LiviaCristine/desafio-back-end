@@ -1,17 +1,17 @@
-const express = require("express"); // aqui estou iniciando o express 
+const express = require("express"); // iniciando o express 
 const pedidoRoutes = require('./routes/pedidoRoutes'); // Importa o roteador de pedidos
 const userRoutes = require('./routes/userRoutes'); // Importa o roteador de usuários
 const cors = require('cors'); // aqui estou trazendo o pacote cors que permite consumir essa api no front-end
 
-const ConectaBancoDeDados = require('./config/database/bancodeDados'); // aqui estou ligando ao arquivo banco de dados
-ConectaBancoDeDados(); // estou chamando a função que conecta o banco de dados 
+const ConectaBancoDeDados = require('./config/database/bancodeDados'); 
+ConectaBancoDeDados(); // chamando a função que conecta o banco de dados 
 
 
-const app = express(); // aqui estou iniciando o app
+const app = express(); // iniciando o app
 app.use(express.json());
 app.use(cors());
 
-const porta = 3333; // aqui estou criando a porta que o servidor vai rodar
+const porta = 3333; // a porta que o servidor vai rodar
 
 // Função para mostrar a porta em que o servidor está rodando
 function mostraPorta() {
