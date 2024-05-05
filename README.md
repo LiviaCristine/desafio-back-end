@@ -17,7 +17,7 @@ ANTES DE EXECUTAR O PROJETO É NECESSÁRIO
 
 1. Clone o repositório
 2. Instale as depêndencias
-3. Execute o script "generateSecretKey.js" ele irá criar um .env e gerar um JWT_TOKEN
+3. Execute o script "generateSecretKey.js" ele irá criar um .env e irá gerar um JWT_TOKEN
 
     No terminal,digite node .\script\generateSecretKey.js obs: só precisa executar o arquivo uma vez
 
