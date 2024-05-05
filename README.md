@@ -2,11 +2,7 @@
 
 #### Descrição
 
-Para a construção desse back-end que consiste em um CRUD de pedidos. Que faz uso de Node.JS com o Express.
-Optei por usar o Express como framework por conta de já ter tido contado, por sua simplicidade,grande ecossistema,flexibilidade,Ótima perfomance,suporte para middleware e documentação abudante.
-As rotas são protegidas por JWT e informado em formato Berear nas requisições.
-Banco de Dados ultizado para essa aplicação foi o MongoBD e o ODM para a conexão com o mesmo foi o mongoose.
-Ele possui um script para população de banco de dados para executar use o comando no terminal(node .\script\database\populateDB.js).
+A construção deste backend consiste em um CRUD de pedidos, utilizando Node.js com o framework Express. Optei pelo Express devido à sua simplicidade, amplo ecossistema, flexibilidade, excelente performance, suporte para middleware e documentação abundante. As rotas são protegidas por JWT e as informações são fornecidas no formato Bearer nas requisições. O banco de dados utilizado para esta aplicação é o MongoDB, e o ODM para a conexão com o mesmo é o Mongoose. Além disso, o projeto inclui um script para a população do banco de dados, que pode ser executado através do comando no terminal node .\script\database\populateDB.js.
 
 ## Pré-requisitos
 ANTES DE EXECUTAR O PROJETO É NECESSÁRIO 
