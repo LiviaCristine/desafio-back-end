@@ -34,7 +34,7 @@ ANTES DE EXECUTAR O PROJETO É NECESSÁRIO
 
 ### Testando as rotas no insomnia ou no Postman: 
 
-# Pré-requisitos
+## Pré-requisitos
 Certifique-se de ter o Insomnia instalado na sua máquina.
 
 # Testando as Rotas
