@@ -22,8 +22,8 @@ ANTES DE EXECUTAR O PROJETO É NECESSÁRIO
     No terminal,digite node .\script\generateSecretKey.js obs: só precisa executar o arquivo uma vez
 
 5. Configure as variáveis de ambiente(use o arquivo.env_example para usar de base para a configuração)
-6. Coloque o arquivo .env dentro da pasta config junto com a pasta .env_example
-7. Inicie o servidor(node ./pedidos.js)
+6. Coloque o arquivo .env dentro da pasta config junto com o arquivo .env_example
+8. Inicie o servidor(node ./pedidos.js)
    
 ## Dependências
 * bcryptjs - Para criptografia de senhas(npm install bcryptjs).
