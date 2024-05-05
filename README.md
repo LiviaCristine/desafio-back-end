@@ -82,6 +82,9 @@ POST http://localhost:3333/pedidos: Esta requisição cria um pedido
 }
 
 GET http://localhost:3333/pedidos: Esta requisição lista todos os pedidos existentes no banco de dados
+
 GET http://localhost:3333/pedidos/inativos): Esta requisição lista todos os pedidos inativos(exlusão lógica).
+
 PUT http://localhost:3333/pedidos/:id: Esta requisição atualiza um pedido existente com o ID fornecido no parâmetro de rota.
+
 DELETE http://localhost:3333/pedidos/:id: Esta requisição exclui um pedido existente com o ID fornecido no parâmetro de rota(exclusão lógica).
