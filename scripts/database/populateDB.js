@@ -40,7 +40,7 @@ const pedidosFicticios = [
 // Função para popular o banco de dados com os pedidos ficticios
 async function populateDatabase() {
     try {
-        // Insere os pedidos de exemplo no banco de dados
+        // Insere os pedidos fictícios no banco de dados
         const pedidosCriados = await Pedidos.create(pedidosFicticios);
         console.log("Pedidos criados com sucesso:", pedidosCriados);
     } catch (error) {
