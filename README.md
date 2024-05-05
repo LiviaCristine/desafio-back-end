@@ -1,4 +1,4 @@
-um# Desafio de código Backend
+seum# Desafio de código Backend
 
 #### Descrição
 
@@ -28,7 +28,7 @@ ANTES DE EXECUTAR O PROJETO É NECESSÁRIO
 ## Dependências
 * bcryptjs - Para criptografia de senhas(npm install bcryptjs).
 * dotenv - Para carregar variáveis de ambiente de um arquivo .env(npm install dotenv).
-* express - Um framework web para Node.js(npm install express).
+* express - framework web para Node.js usado nesse projeto (npm install express).
 * jsonwebtoken - Para geração e verificação de tokens JWT(npm install jsonwebtoken).
 * mongodb - O driver oficial do MongoDB para Node.js(npm install mongodb).
 * mongoose - Um ODM para MongoDB(npm install mongoose).
