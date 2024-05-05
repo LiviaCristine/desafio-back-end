@@ -34,8 +34,8 @@ ANTES DE EXECUTAR O PROJETO É NECESSÁRIO
 
 # Testando as rotas no insomnia ou no Postman: 
 
-## Pré-requisitos
-Certifique-se de ter o Insomnia instalado na sua máquina.
+# Pré-requisitos
+Certifique-se de ter o Insomnia ou o Postman instalado na sua máquina.
 
 # Testando as Rotas
 Abra o Insomnia e crie uma request collection
