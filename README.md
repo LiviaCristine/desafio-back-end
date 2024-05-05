@@ -21,7 +21,7 @@ ANTES DE EXECUTAR O PROJETO É NECESSÁRIO
 
     No terminal,digite node .\script\generateSecretKey.js obs: só precisa executar o arquivo uma vez
 
-5. Configure as variáveis de ambiente(use o arquivo.env_example para usar de base para a configuração)
+5. Configure as variáveis de ambiente(use o arquivo .env_example para usar de base para a configuração)
 6. Coloque o arquivo .env dentro da pasta config junto com o arquivo .env_example
 8. Inicie o servidor(node ./pedidos.js)
    
@@ -42,7 +42,7 @@ Certifique-se de ter o Insomnia ou o Postman instalado na sua máquina.
 # Testando as Rotas
 Abra o Insomnia ou o Postman e crie uma request collection
 Clique na requisição que você deseja enviar para o seu servidor. 
-Certifique-se de que as variáveis relevantes (por exemplo, URL, cabeçalho para que você possa informar o token nas rotas privadas, corpo da solicitação) estejam configuradas corretamente.
+Certifique-se de que as variáveis relevantes (por exemplo, URL, cabeçalho(header) para que você possa informar o token nas rotas privadas, corpo da solicitação) estejam configuradas corretamente.
 Clique no botão "Send" para enviar a solicitação para o seu servidor.
 O Insomnia exibirá a resposta do servidor, incluindo o código de status HTTP, o corpo da resposta e quaisquer cabeçalhos relevantes.
 
