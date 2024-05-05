@@ -112,8 +112,8 @@ PUT http://localhost:3333/pedidos/:id: Esta requisição atualiza um pedido exis
 
 DELETE http://localhost:3333/pedidos/:id: Esta requisição exclui um pedido existente com o ID fornecido no parâmetro de rota(exclusão lógica).
 
-### REQUISIÇÃO PARA FILTRAR PEDIDOS
-# obs: É uma rota privada, então adicione o token JWT gerado ao logar com o usuário
+## REQUISIÇÃO PARA FILTRAR PEDIDOS
+### obs: É uma rota privada, então adicione o token JWT gerado ao logar com o usuário
 ![image](https://github.com/LiviaCristine/desafio-back-end/assets/127121054/6e114e87-790d-4b57-aa3b-acb39ba2c84a)
 ![image](https://github.com/LiviaCristine/desafio-back-end/assets/127121054/0a328dae-aa07-40fa-8843-238d94017455)
 
