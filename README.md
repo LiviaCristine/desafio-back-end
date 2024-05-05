@@ -31,6 +31,7 @@ ANTES DE EXECUTAR O PROJETO É NECESSÁRIO
 * jsonwebtoken - Para geração e verificação de tokens JWT(npm install jsonwebtoken).
 * mongodb - O driver oficial do MongoDB para Node.js(npm install mongodb).
 * mongoose - Um ODM para MongoDB(npm install mongoose).
+* cors - Pacote que permite consumir a api no front-end(npm install cors)
 
 # Testando as rotas no insomnia ou no Postman: 
 
