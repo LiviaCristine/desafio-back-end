@@ -84,6 +84,8 @@ POST http://localhost:3333/pedidos: Esta requisição cria um pedido
     ]
 }
 
+POST http://localhost:3333/pedidos/filtrarpedidos
+
 GET http://localhost:3333/pedidos: Esta requisição lista todos os pedidos existentes no banco de dados
 
 GET http://localhost:3333/pedidos/inativos): Esta requisição lista todos os pedidos inativos.
