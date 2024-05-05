@@ -32,7 +32,7 @@ ANTES DE EXECUTAR O PROJETO É NECESSÁRIO
 * mongodb - O driver oficial do MongoDB para Node.js(npm install mongodb).
 * mongoose - Um ODM para MongoDB(npm install mongoose).
 
-### Testando as rotas no insomnia ou no Postman: 
+# Testando as rotas no insomnia ou no Postman: 
 
 ## Pré-requisitos
 Certifique-se de ter o Insomnia instalado na sua máquina.
