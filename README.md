@@ -47,13 +47,13 @@ O Insomnia exibirá a resposta do servidor, incluindo o código de status HTTP, 
 # Como fazer requisições nessa API
 POST http://localhost:3333/users/criar: Esta requisição cria um usuário
 {
-    "nome": "nome_aqui",
-    "email": "email@gmail.com",
+    "nome": "Gisele",
+    "email": "gisele@gmail.com",
     "senha": "12345"
 }
 POST http://localhost:3333/users/login: Esta requisição faz login do usuário e gera o token JWT para informar nas outras requisições que são privadas.
 {
-     "email": "email@gmail.com",
+     "email": "gisele@gmail.com",
     "senha": "12345"
 }
 
@@ -62,7 +62,7 @@ POST http://localhost:3333/pedidos: Esta requisição cria um pedido
     "numeroDoPedido": "345342",
     "previsaoEntrega": "2023-01-01",
     "cliente": {
-        "nome": "Geslaine",
+        "nome": "Gisele",
         "documento": "12345678977"
     },
     "enderecoEntrega": {
