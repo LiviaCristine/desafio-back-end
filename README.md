@@ -1,4 +1,4 @@
-seum# Desafio de código Backend
+# Desafio de código Backend
 
 #### Descrição
 
@@ -42,7 +42,7 @@ Certifique-se de ter o Insomnia ou o Postman instalado na sua máquina.
 # Testando as Rotas
 Abra o Insomnia ou o Postman e crie uma request collection
 Clique na requisição que você deseja enviar para o seu servidor. 
-Certifique-se de que as variáveis relevantes (por exemplo, URL base, cabeçalhos, corpo da solicitação) estejam configuradas corretamente.
+Certifique-se de que as variáveis relevantes (por exemplo, URL, cabeçalho para que você possa informar o token nas rotas privadas, corpo da solicitação) estejam configuradas corretamente.
 Clique no botão "Send" para enviar a solicitação para o seu servidor.
 O Insomnia exibirá a resposta do servidor, incluindo o código de status HTTP, o corpo da resposta e quaisquer cabeçalhos relevantes.
 
@@ -114,15 +114,12 @@ PUT http://localhost:3333/pedidos/:id: Esta requisição atualiza um pedido exis
 
 DELETE http://localhost:3333/pedidos/:id: Esta requisição exclui um pedido existente com o ID fornecido no parâmetro de rota(exclusão lógica).
 
-## REQUISIÇÃO PARA FILTRAR PEDIDOS
-#### obs: É uma rota privada, então adicione o token JWT gerado ao logar com o usuário(adicionei logs de depuração para poder resolver o problema de filtragem)
-![image](https://github.com/LiviaCristine/desafio-back-end/assets/127121054/6e114e87-790d-4b57-aa3b-acb39ba2c84a)
-![image](https://github.com/LiviaCristine/desafio-back-end/assets/127121054/0a328dae-aa07-40fa-8843-238d94017455)
+
 
 # Como usar o Token JWT
 1. Após fazer login em um usuário, você receberá um token JWT.
-2. Guarde esse token em um local seguro, pois é com ele que você irá acessar as rotas privadas(obs: Depois de 1hr o token expira e você terá que fazer a requisção de login novamente).
-3. Ao fazer uma solicitação para uma rota protegida, inclua o token no cabeçalho(header) da solicitação da seguinte maneira: Authorization: Bearer seu_token_jwt_aqui
+2. Guarde esse token em um local seguro, pois é com ele que você irá acessar as rotas privadas(obs: Depois de 1hr o token expira e você terá que fazer a requisição de login novamente).
+3. Ao fazer uma solicitação para uma rota protegida, inclua o token no cabeçalho(header) da solicitação da seguinte maneira: Authorization: Bearer seu_token
 
    #### Dúvidas sobre o código entre em contato pelo o linkedin: https://www.linkedin.com/in/livia-castro-73478319b/
  
