@@ -38,7 +38,7 @@ ANTES DE EXECUTAR O PROJETO É NECESSÁRIO
 Certifique-se de ter o Insomnia ou o Postman instalado na sua máquina.
 
 # Testando as Rotas
-Abra o Insomnia e crie uma request collection
+Abra o Insomnia ou o Postman e crie uma request collection
 Clique na requisição que você deseja enviar para o seu servidor. 
 Certifique-se de que as variáveis relevantes (por exemplo, URL base, cabeçalhos, corpo da solicitação) estejam configuradas corretamente.
 Clique no botão "Send" para enviar a solicitação para o seu servidor.
