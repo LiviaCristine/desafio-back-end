@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const ConectaBancoDeDados = require('../../config/database/bancodeDados');
-const { Pedidos } = require('../../models/pedidosModel');
+const  Pedidos  = require('../../models/pedidosModel');
 
 // Função para conectar ao banco de dados
 ConectaBancoDeDados();
 
-// Array com os pedidos de exemplo
-const pedidosExemplo = [
+// Array com os pedidos fictícios
+const pedidosFicticios = [
     {
         numeroDoPedido: '1234',
         previsaoEntrega: new Date(),
@@ -37,11 +37,11 @@ const pedidosExemplo = [
     }
 ];
 
-// Função para popular o banco de dados com os pedidos de exemplo
+// Função para popular o banco de dados com os pedidos ficticios
 async function populateDatabase() {
     try {
         // Insere os pedidos de exemplo no banco de dados
-        const pedidosCriados = await Pedidos.create(pedidosExemplo);
+        const pedidosCriados = await Pedidos.create(pedidosFicticios);
         console.log("Pedidos criados com sucesso:", pedidosCriados);
     } catch (error) {
         console.error("Erro ao popular o banco de dados:", error);

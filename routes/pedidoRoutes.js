@@ -8,7 +8,7 @@ const {
     deletarPedidos
 } = require('../controllers/pedidosController');
 const auth = require('../middlewares/authMiddleware');
-const router = express.Router();
+const router = express.Router(); // aqui estou configurando a primeira parte da rota de pedidos
 
 // Rotas da aplicação
 // Rotas protegidas

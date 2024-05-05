@@ -20,7 +20,7 @@ const pedidoSchema = new mongoose.Schema({
             required: true
         }
     },
-    // Adicionando referência ao usuário que fez o pedido
+    // referência ao usuário que fez o pedido
     usuario: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'

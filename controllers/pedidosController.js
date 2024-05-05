@@ -1,37 +1,36 @@
-const { Pedido } = require('../models/pedidosModel');
+const  Pedido  = require('../models/pedidosModel');
 
+// Função assíncrona para criar pedidos
 async function criarPedidos(request, response) {
     try {
-        // Verificar se todos os campos obrigatórios estão presentes na requisição
-        const {
-            numeroDoPedido,
-            previsaoEntrega,
-            cliente: { nome, documento },
-            enderecoEntrega: { rua, numero, bairro, cidade, estado, cep },
-            itensPedido
-        } = request.body;
+        // Verifica se o usuário está autenticado
+        const usuarioId = request.user ? request.user.id : null;
 
-        // Verificar se o usuário está autenticado
-        const usuarioId = request.user.id;
-        if (!usuarioId) {
-            return response.status(401).json({ error: 'Usuário não autenticado' });
+        // Verifica se todos os campos obrigatórios estão presentes na requisição
+        const { numeroDoPedido, previsaoEntrega, cliente, enderecoEntrega, itensPedido } = request.body;
+
+        if (!numeroDoPedido || !previsaoEntrega || !cliente || !enderecoEntrega || !itensPedido) {
+            return response.status(400).json({ error: 'Os campos obrigatórios estão ausentes no corpo da solicitação' });
         }
 
-        // Criar um novo documento Pedido associado ao usuário
+        const { nome, documento } = cliente;
+        const { rua, numero, bairro, cidade, estado, cep } = enderecoEntrega;
+
+        // Cria um novo documento Pedido associado ao usuário
         const novoPedido = new Pedido({
             numeroDoPedido,
             previsaoEntrega,
             cliente: { nome, documento },
             enderecoEntrega: { rua, numero, bairro, cidade, estado, cep },
             itensPedido,
-            usuario: usuarioId, // Associar o pedido ao usuário
+            usuario: usuarioId, // Associa o pedido ao usuário
             dataCriacao: new Date()
         });
 
-        // Salvar o novo pedido no banco de dados
+        // Salva o novo pedido no banco de dados
         const pedidoCriado = await novoPedido.save();
 
-        // Responder com o pedido criado e status HTTP 201 (Created)
+        // Responde com o pedido criado e status HTTP 201 (Created)
         response.status(201).json(pedidoCriado);
     } catch (error) {
         // Em caso de erro, logar o erro no console e responder com status HTTP 500 (Internal Server Error)
@@ -41,9 +40,9 @@ async function criarPedidos(request, response) {
 }
 
 // Função assíncrona para listar todos os pedidos inativos
-async function listarPedidosInativos(request, response) {
+async function listarPedidosInativos(request,response) {
     try {
-        // Busca todos os pedidos marcados como inativos no banco de dados
+        // Busca todos os pedidos marcados como inativos(status:false) no banco de dados
         const pedidosInativos = await Pedido.find({ ativo: false });
 
         // Responde com os pedidos inativos encontrados
@@ -70,39 +69,37 @@ async function listarPedidos(request, response) {
     }
 };
 
-async function filtrarPedidos(request, response) {
+// Função assíncrona para filtrarPedidos
+async function filtrarPedidos(request, response){
+    const { numero, dataInicial, dataFinal, status } = request.query;
+    const filter = {};
+
+    console.log('Filtros recebidos:', request.query); // Adicionando um log para os filtros recebidos na query
+
+    if (numero) {
+        filter.numeroDoPedido = numero;
+    }
+
+    if (dataInicial && dataFinal) {
+        filter.previsaoEntrega = { $gte: new Date(dataInicial), $lte: new Date(dataFinal) };
+    }
+
+    if (status === 'ativo' || status === 'inativo') {
+        filter.status = (status === 'ativo'); // Usando o campo status para filtrar
+    }
+
+    console.log('Filtro aplicado:', filter); // Adicionando um log para o filtro aplicado
+
     try {
-        // Obtenha os parâmetros de consulta da requisição
-        const { numero, dataInicial, dataFinal, status } = request.query;
+        const pedidos = await Pedido.find(filter);
 
-        // Construa o objeto de filtro com base nos parâmetros de consulta
-        const filtro = {};
-        if (numero) filtro.numeroDoPedido = numero;
-        if (dataInicial && dataFinal) {
-            filtro.previsaoEntrega = {
-                $gte: new Date(dataInicial),
-                $lte: new Date(dataFinal)
-            };
-        }
-        if (status) filtro.status = status.toLowerCase();
+        console.log('Pedidos encontrados:', pedidos); // Adicionando um log para os pedidos encontrados
 
-        // Execute a consulta no banco de dados com base no filtro
-        const pedidosFiltrados = await Pedido.find(filtro);
-
-        // Formatar datas antes de enviar a resposta
-        const pedidosFormatados = pedidosFiltrados.map(pedido => ({
-            ...pedido._doc,
-            previsaoEntrega: pedido.previsaoEntrega.toLocaleDateString() // Formatação da data
-        }));
-
-        response.json(pedidosFormatados);
+        response.json(pedidos);
     } catch (error) {
-        console.error('Erro ao filtrar pedidos:', error);
-        response.status(500).json({ error: 'Erro interno do servidor ao filtrar pedidos' });
+        response.status(500).json({ message: 'Erro ao buscar pedidos' });
     }
 };
-
-
 
 // Função assíncrona para atualizar um pedido existente
 async function atualizarPedidos(request, response) {

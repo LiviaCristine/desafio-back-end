@@ -3,7 +3,7 @@ const crypto = require('crypto');
 
 // Verificar se o arquivo .env já existe
 if (!fs.existsSync('.env')) {
-    // Se o arquivo .env não existir, crie-o e adicione a chave secreta
+    // Se o arquivo .env não existir, cria e adicione a chave secreta
     const jwtSecret = crypto.randomBytes(64).toString('hex');
     fs.writeFileSync('.env', `JWT_SECRET=${jwtSecret}\n`);
     console.log('Chave secreta gerada e salva com sucesso!');

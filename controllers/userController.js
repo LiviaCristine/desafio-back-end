@@ -1,19 +1,19 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { User } = require('../models/pedidosModel');
+const  User  = require('../models/userModel');
 
 // Função assíncrona para criar usuário
 async function criarUsuario(request, response) {
     try {
         const { nome, email, senha } = request.body;
-        // Verifique se o email já está em uso
+        // Verifica se o email já está em uso
         const existingUser = await User.findOne({ email });
         if (existingUser) {
             return response.status(400).json({ error: 'Email já está em uso' });
         }
-        // Crie um novo usuário e hash a senha
+        // Cria um novo usuário e hash a senha
         const hashedSenha = await bcrypt.hash(senha, 10);
-        const newUser = new User({ nome, email, senha: hashedSenha }); // Salve o hash da senha
+        const newUser = new User({ nome, email, senha: hashedSenha }); // Salva o hash da senha
         await newUser.save();
         response.status(201).json({ message: 'Usuário criado com sucesso' });
     } catch (error) {
