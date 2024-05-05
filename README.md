@@ -51,6 +51,7 @@ POST http://localhost:3333/users/criar: Esta requisição cria um usuário
     "email": "gisele@gmail.com",
     "senha": "12345"
 }
+
 POST http://localhost:3333/users/login: Esta requisição faz login do usuário e gera o token JWT para informar nas outras requisições que são privadas.
 {
      "email": "gisele@gmail.com",
