@@ -122,7 +122,7 @@ DELETE http://localhost:3333/pedidos/:id: Esta requisição exclui um pedido exi
 2. Guarde esse token em um local seguro, pois é com ele que você irá acessar as rotas privadas(obs: Depois de 1hr o token expira e você terá que fazer a requisção de login novamente).
 3. Ao fazer uma solicitação para uma rota protegida, inclua o token no cabeçalho(header) da solicitação da seguinte maneira: Authorization: Bearer seu_token_jwt_aqui
 
-   #### Dúvidas sobre o código entre em contato pelo o linkedin:https://www.linkedin.com/in/livia-castro-73478319b/
+   #### Dúvidas sobre o código entre em contato pelo o linkedin: https://www.linkedin.com/in/livia-castro-73478319b/
  
 
 
