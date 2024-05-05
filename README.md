@@ -19,7 +19,7 @@ ANTES DE EXECUTAR O PROJETO É NECESSÁRIO
 2. Instale as depêndencias
 3. Execute o script "generateSecretKey.js" ele irá criar um .env e irá gerar um JWT_TOKEN
 
-    No terminal,digite node .\script\generateSecretKey.js obs: só precisa executar o arquivo uma vez
+    No terminal,digite node .\scripts\generateSecretKey.js obs: só precisa executar o arquivo uma vez
 
 5. Configure as variáveis de ambiente(use o arquivo .env_example para usar de base para a configuração)
 6. Coloque o arquivo .env dentro da pasta config junto com o arquivo .env_example
