@@ -1,4 +1,4 @@
-# Desafio de código Backend
+jo# Desafio de código Backend
 
 #### Descrição
 
@@ -84,7 +84,7 @@ POST http://localhost:3333/pedidos: Esta requisição cria um pedido
     ]
 }
 
-POST http://localhost:3333/pedidos/filtrarpedidos
+POST http://localhost:3333/pedidos/filtrarpedidos: Está rota filtrada pedidos
 
 GET http://localhost:3333/pedidos: Esta requisição lista todos os pedidos existentes no banco de dados
 
