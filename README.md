@@ -84,7 +84,7 @@ POST http://localhost:3333/pedidos: Esta requisição cria um pedido
     ]
 }
 
-POST http://localhost:3333/pedidos/filtrarpedidos: Está rota filtrada pedidos
+POST http://localhost:3333/pedidos/filtrarpedidos: Esta requisição filtra os pedidos com base em parâmetros como número, período(data inicial e data final) e status,porém ela não está filtrando com base nos parâmetros passados na requisição 
 
 GET http://localhost:3333/pedidos: Esta requisição lista todos os pedidos existentes no banco de dados
 
